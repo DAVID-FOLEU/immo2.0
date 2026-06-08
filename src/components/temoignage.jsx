@@ -13,14 +13,14 @@ function TestimonialMarquee() {
 
   const token = localStorage.getItem('token')
 
-  const API_BASE_URL = import.meta.env?.VITE_API_URL ;
+  // const API_BASE_URL = import.meta.env?.VITE_API_URL ;
 
   useEffect(() => {
     let isMounted = true
 
     const fetchTestimonials = async () => {
       try {
-        const response = await axios.get(`${API_BASE_URL}/api/temoignages`)
+        const response = await axios.get(`/api/temoignages`)
         if (isMounted) {
           setReviews(response.data)
           setLoading(false)
@@ -38,11 +38,11 @@ function TestimonialMarquee() {
     return () => {
       isMounted = false
     }
-  }, [API_BASE_URL])
+  }, [])
 
   const refreshTestimonials = async () => {
     try {
-      const response = await axios.get(`${API_BASE_URL}/api/temoignages`)
+      const response = await axios.get(`/api/temoignages`)
       setReviews(response.data)
     } catch (err) {
       console.error('Erreur lors du rafraîchissement des témoignages:', err)
@@ -58,7 +58,7 @@ function TestimonialMarquee() {
     }
 
     try {
-      await axios.post(`${API_BASE_URL}/api/temoignages`, {
+      await axios.post(`/api/temoignages`, {
         rating: parseInt(newReview.rating, 10),
         comment: newReview.comment
       }, {
@@ -102,7 +102,7 @@ function TestimonialMarquee() {
             <div className="marquee-track">
               {duplicatedReviews.map((review, index) => {
                 const avatarUrl = review.avatar_url 
-                  ? (review.avatar_url.startsWith('http') ? review.avatar_url : `${API_BASE_URL}/api/uploads/${review.avatar_url}`)
+                  ? (review.avatar_url.startsWith('http') ? review.avatar_url : `/api/uploads/${review.avatar_url}`)
                   : fallbackAvatar
 
                 return (
