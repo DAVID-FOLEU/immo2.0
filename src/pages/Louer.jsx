@@ -12,7 +12,7 @@ function Louer() {
     async function fetchCars() {
       try {
         // Modifie l'URL si ton API tourne sur un autre port (ex: http://localhost:3000/api/cars)
-        const response = await fetch('http://localhost:3000/api/cars')
+        const response = await fetch('/api/cars')
         
         if (!response.ok) {
           throw new Error('Impossible de charger les véhicules.')

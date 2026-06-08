@@ -46,7 +46,7 @@ function ImmobilierPage() {
 
     async function fetchProperties() {
       try {
-        const response = await fetch('http://localhost:3000/api/annonces?categorie=immobilier')
+        const response = await fetch('/api/annonces?categorie=immobilier')
         if (!response.ok) {
           throw new Error('Impossible de charger le catalogue immobilier.')
         }

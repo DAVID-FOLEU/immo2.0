@@ -28,7 +28,7 @@ function Automobile() {
 
     async function fetchCars() {
       try {
-        const res = await fetch('http://localhost:3000/api/annonces?categorie=automobile')
+        const res = await fetch('/api/annonces?categorie=automobile')
         if (!res.ok) throw new Error('Erreur lors du chargement des véhicules')
         const result = await res.json()
         
