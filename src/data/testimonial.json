@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Cédric Noubi",
+    "role": "CEO, Tech Solutions",
+    "comment": "Le service est impeccable. Une réactivité et un professionnalisme qui font toute la différence pour notre entreprise.",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop"
+  },
+  {
+    "id": 2,
+    "name": "Mariane Fotso",
+    "role": "Designer UX/UI",
+    "comment": "Une expérience utilisateur fluide et un design épuré. Je recommande vivement leurs services immobiliers.",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop"
+  },
+  {
+    "id": 3,
+    "name": "Arthur Kamga",
+    "role": "Investisseur",
+    "comment": "Fiable, sécurisé et transparent. Idéal pour gérer mes recherches et mes transactions à distance.",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop"
+  },
+  {
+    "id": 4,
+    "name": "Sarah Ebanda",
+    "role": "Directrice d'Agence",
+    "comment": "Le suivi client est exceptionnel. Les outils mis à disposition simplifient énormément mon quotidien.",
+    "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop"
+  }
+]

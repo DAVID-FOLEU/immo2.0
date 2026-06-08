@@ -1,0 +1,69 @@
+/* Mon wrapper qui sert de fenêtre de vision sécurisée */
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100rem;
+  display: flex;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+}
+
+/* Ma piste qui défile en continu */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 2rem;
+  animation: scrollMarquee 35s linear infinite;
+}
+
+/* Je mets l'animation en pause quand je survole la zone pour permettre la lecture */
+.marquee-wrapper:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Mes cartes d'avis au style minimaliste */
+.testimonial-card {
+  background: #1e1e1e;
+  border: 1px solid #2d2d2d;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 350px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.testimonial-card:hover {
+  border-color: #198754; /* Ma couleur de marque (success Bootstrap) au survol */
+  transform: translateY(-5px);
+}
+
+/* Mon filtre pour forcer le profil en Noir et Blanc */
+.avatar-bw {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(110%);
+  transition: filter 0.4s ease;
+}
+
+/* Optionnel : Le profil repasse en couleur si je survole sa carte */
+.testimonial-card:hover .avatar-bw {
+  filter: grayscale(0%) contrast(100%);
+}
+
+.testimonial-text {
+  font-size: 0.9rem;
+  color: #c9c9c9;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Mon animation pure CSS pour faire glisser ma piste de 0 à -50% */
+@keyframes scrollMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
