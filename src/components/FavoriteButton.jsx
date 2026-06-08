@@ -50,7 +50,7 @@ function FavoriteButton({ item, type = 'car', onToggle, className = '' }) {
     if (token) {
       setLoading(true)
       try {
-        const response = await axios.post(`http://localhost:3000/api/favorites/toggle`, 
+        const response = await axios.post(`/api/favorites/toggle`, 
           { annonceId: item.id },
           { headers: { Authorization: `Bearer ${token}` } }
         )

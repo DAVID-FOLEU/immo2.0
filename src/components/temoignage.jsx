@@ -13,7 +13,7 @@ function TestimonialMarquee() {
 
   const token = localStorage.getItem('token')
 
-  const API_BASE_URL = import.meta.env?.VITE_API_URL || 'http://localhost:3000';
+  const API_BASE_URL = import.meta.env?.VITE_API_URL ;
 
   useEffect(() => {
     let isMounted = true

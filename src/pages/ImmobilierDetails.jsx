@@ -22,7 +22,7 @@ function ImmobilierDetails() {
     async function fetchPropertyDetails() {
       try {
         // Appelle ton API Node/MySQL pour récupérer un bien spécifique par son ID
-        const response = await fetch(`http://localhost:3000/api/annonces/${id}`)
+        const response = await fetch(`/api/annonces/${id}`)
         if (!response.ok) {
           throw new Error('Ce bien immobilier est introuvable ou a été supprimé.')
         }
