@@ -16,7 +16,7 @@ import Footer from './components/Footer.jsx'
 import UserDashboard from './pages/userDashbord.jsx'
 import ForgotPassword from './pages/ForgotPassword.jsx'
 import VerifResetPassword from './pages/VerifResetPassword.jsx'
-import Register from './pages/register.jsx'
+import Register from './pages/Register.jsx'
 import VerifEmail from './pages/VerifEmail.jsx'
 
 function App() {
